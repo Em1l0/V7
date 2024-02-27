@@ -1,0 +1,800 @@
+/*------------------------- Dark/Light Mode -------------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+:root {
+	--nc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+  /* colours that dont change */
+  --cl-G-lg: #c31313;
+  --cl-GD-lg: #9d1414;
+  --cl-H-lg: #c2a916;
+  --cl-HD-lg: #978417;
+  --cl-S-lg: #0f801a;
+  --cl-SD-lg: #0b3e10;
+  --cl-R-lg: #1830b9;
+  --cl-RD-lg: #0f207e;
+  --cl-P-lg: #81149a;
+  --cl-PD-lg: #4a0a58;
+
+
+	/* Light theme */
+	--cl-b-lg: #000000;
+  --cl-w-lg: #ffffff;
+  --cl-Gr-lg: #d01717;
+  --cl-Hu-lg: #e3c51b;
+  --cl-Sl-lg: #19a227;
+  --cl-Ra-lg: #1c36c9;
+  --cl-Pu-lg: #951ab1;
+
+    
+
+	/* Dark theme */
+	--cl-w-dr: #ffffff;
+  --cl-b-dr: #000000;
+  --cl-G-dr: #aa1515;
+  --cl-H-dr: #b09914;
+  --cl-S-dr: #115d19;
+  --cl-R-dr: #132695;
+  --cl-P-dr: #610d74;
+    
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--cl-b-lg: var(--cl-w-dr);
+    --cl-w-lg: var(--cl-b-dr);
+    --cl-Gr-lg: var(--cl-G-dr);
+    --cl-Hu-lg: var(--cl-H-dr);
+    --cl-Sl-lg: var(--cl-S-dr);
+    --cl-Ra-lg: var(--cl-R-dr);
+    --cl-Pu-lg: var(--cl-P-dr);
+    
+	}
+}
+
+/*------------------------- Body/Background Colour -------------------------*/
+
+
+body{
+    width: 100%;
+    position: relative;
+    background-image: repeating-linear-gradient(
+        20deg,
+        #c31313,
+        #9d1414 5rem,
+        #d8ba11 5rem,
+        #978417 10rem,
+        #0f801a 10rem,
+        #0b3e10 15rem,
+        #1631cc 15rem,
+        #0f207e 20rem,
+        #81149a 20rem,
+        #4a0a58 25rem
+
+
+
+
+
+    );
+    background-size: cover;
+    background-attachment: fixed;   
+ 
+}
+
+
+
+/*------------------------- Top Menu -------------------------*/
+
+
+.topnav {
+  background-color: var(--cl-w-lg);
+}
+
+.topmenu{
+  display:flex;
+  position: fixed;
+  top:3rem;
+  right:-30rem;
+  flex-flow: column;
+  background-color: var(--cl-w-lg);
+  width:80%;
+  z-index: 99;
+  padding: 2rem;
+  transition:  all .5s ease;
+  border: solid 3px var(--cl-b-lg);
+}
+
+.inputmenu:checked ~ .topmenu{
+    right:0;
+    transition:  all .5s ease;
+}
+
+
+.topmenu a  {
+    display:block;
+    color: var(--cl-b-lg);
+    padding: .8rem;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.social a{
+    display: inline-block;
+}
+
+.inputmenu{
+    display:none;
+
+}
+
+.menulabel{
+    font-size: 4rem;
+    
+    position:fixed;
+    top: .5rem;
+    right: 1rem;
+    z-index: 3000;
+    transition: all .5s ease;
+}
+
+.inputmenu:checked + .menulabel{
+    transform: rotate(180deg);
+    transition: all .5s ease;
+}
+
+@media screen and (min-width:48rem){
+
+    .menulabel{
+        display:none;
+    }
+    
+    .topmenu{
+        position: fixed;
+        max-width: 100rem;
+        margin: auto;
+        flex-flow:row;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 0;
+    }
+    
+    }
+
+    @media screen and (max-width:768px){
+      .topmenu{
+        right:-40rem;
+      }
+      
+    }
+
+
+
+
+
+
+    /*------------------------- Footer -------------------------*/
+
+footer h2{
+  text-align:center;
+  padding-top:5px;
+}
+
+footer{
+  background:var(--cl-Gr-lg);
+  font-size:larger;
+}
+
+.articles{
+  color:#f8d3d3;
+  text-align:center;
+  padding:20px;
+}
+
+li a{
+  color:#ff9c1a;
+}
+
+
+
+@media screen and (min-width:800px) {
+
+  .articles{
+      display:grid;
+      grid-template-columns: 33% 33% 33%;
+      text-align:left;
+      gap: 20px;
+      
+  }
+  
+}
+
+
+
+
+
+
+/*------------------------- Website 1 -------------------------*/
+/*------------------------- Hogwarts entry -------------------------*/
+
+
+.hogwarts_entry{
+    text-align:center;
+}
+.hogwarts_entry h2{
+  background-color: rgb(255, 255, 255, 0.5);
+  width:80%;
+
+}
+
+
+
+
+
+
+/*------------------------- Website 1 -------------------------*/
+/*------------------------- Slideshow -------------------------*/
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+}
+  
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+/*------------------------- Website 1 -------------------------*/
+/*------------------------- Info on Hogwarts -------------------------*/
+
+.hogwarts_explained{
+background-color: var(--cl-Hu-lg);
+color: var(--cl-b-lg);
+width: 100%;
+text-align:center;
+font-size:larger;
+}
+.hogwarts_explained p{
+  padding:10px
+}
+
+
+
+
+
+
+/*------------------------- Website 1 -------------------------*/
+/*------------------------- Info on Hogwarts <form> -------------------------*/
+
+textarea{
+    font-size:larger;
+    font-style:italic;
+    width:90%;
+}
+
+
+form{
+    border: solid 4px var(--cl-b-lg);
+    max-width: 400px;
+    margin:20px;
+    padding:20px;
+    display:grid;
+    color:white;
+    background-color:var(--cl-Pu-lg);
+}
+
+#email{
+    width: 200px;
+    height:25px;
+}
+
+
+
+#submit{
+    width:50%;
+    height:60px;
+    font-size:larger;
+}
+
+#phone{
+    height:50px;
+}
+
+::placeholder{
+    color:var(--nc-bg-22)
+}
+
+
+
+
+@media screen and (max-width:400px) {
+
+  form{
+  padding:10px;
+  
+  }
+
+  #name{
+  width:60%
+  }
+
+  #email{
+  width:80%;  
+  }
+
+
+  #phone{
+  width:70%
+  }
+
+  #date{
+      width:90%;
+  }
+
+}
+
+
+@media screen and (min-width:800px) {
+
+  textarea{
+  width: 230px; 
+  }
+
+  .hogwarts_explained{
+      display:grid;
+      grid-template-columns: 50% 50%;
+      
+  }
+    
+}
+
+
+@media screen and (max-width:500px) {
+
+  textarea{
+  width:50%;
+  min-width:150px;
+  }
+}
+
+
+
+
+
+
+/*------------------------- Website 2 -------------------------*/
+/*------------------------- Table -------------------------*/
+
+
+.Register{
+  color:purple;
+}
+
+.tabl{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  background-color:var(--cl-Hu-lg);
+}
+
+  
+table {
+  border: 1px solid beige;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+/*background-color: var(--nc-bg-13);*/
+  border: 1px solid yellow;
+  padding: .35em;
+}
+
+table td {
+  padding: .625em;
+  text-align: center;
+  font-size:larger;
+}
+
+
+table th {
+  padding: .625em;
+  text-align: center;
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.color1{
+  background-color:var(--cl-Ra-lg);
+  color:white;
+}
+
+.color2{
+  background-color:var(--cl-Sl-lg);
+  color: var(--cl-b-lg);
+}
+
+
+@media screen and (max-width: 760px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px; 
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid pink;
+    display: block;
+    font-size: large;
+    text-align: right;
+  }
+  
+  table td::before {
+
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+      
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
+/*------------------------- Website 2 -------------------------*/
+/*------------------------- Articles -------------------------*/
+
+.articles2 article{
+  background-color: var(--cl-Ra-lg);
+  color:white;
+  padding:20px;
+  width:17.5rem;
+}
+
+main h3{
+  text-align: center;
+  background-color:rgb(255, 255, 255, 0.5);
+  color: black;
+}
+
+
+#slideset2 {height: 12em; 
+  width:70%;
+  margin-top:50px;
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid red;
+  background-color: var(--cl-Pu-lg);
+  color:var(--cl-b-lg);
+}       
+
+#slideset2 > * {position: absolute;
+top: 100%; 
+left: 10px;
+animation: 24s autoplay2 infinite ease-in-out;
+}
+
+
+
+@keyframes autoplay2 {
+0% {top: 100%}
+4% {top: 0%}
+16.6% {top: 0%}
+19.33% {top: -100%} 
+100% {top: -100%}
+}
+
+#pause1:checked ~ #slideset1 > * {
+animation-play-state: paused}
+
+#pause1 {display: none}
+
+
+
+
+#pause1 ~ * [for=pause1] .paused {display: none}
+#pause1 ~ * [for=pause1] .running {display: inline}
+#pause1:checked ~ * [for=pause1] .running {display: none}
+#pause1:checked ~ #slideset1 > * {animation-play-state: paused}
+
+#slideset2 > *:nth-child(1) {animation-delay: 0s}
+#slideset2 > *:nth-child(2) {animation-delay: 4s}
+#slideset2 > *:nth-child(3) {animation-delay: 8s} 
+#slideset2 > *:nth-child(4) {animation-delay: 12s}
+#slideset2 > *:nth-child(5) {animation-delay: 16s}
+#slideset2 > *:nth-child(6) {animation-delay: 20s} 
+
+
+@media screen and (min-width: 580px){
+  
+  .articles2{
+    display:grid;
+    grid-template-columns: 50% 50%;
+
+  }
+}
+
+
+
+
+
+/*------------------------- Website 2 -------------------------*/
+/*------------------------- Hogsmeade and Forest -------------------------*/
+
+.HF{
+  background-color: var(--cl-Pu-lg);
+  color:khaki;
+}
+.HF div{
+padding:30px;
+}
+
+@media screen and (min-width: 580px){
+  
+  .HF{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+
+  }
+}
+
+
+
+
+
+
+/*------------------------- Popup -------------------------*/
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+      width: 70%;
+  }
+  .popup{
+      width: 70%;
+  }
+}
+
+
+
+
+
+
+/*------------------------- Animations -------------------------*/
+
+.animate__rollIn{
+  animation-name: rollIn;
+  animation-duration:3s;}
+
+@keyframes rollIn{
+  from{opacity:0;
+      transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+
+
+
+
+
+
+/*------------------------- Icons -------------------------*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?is7rpo');
+  src:  url('fonts/icomoon.eot?is7rpo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?is7rpo') format('truetype'),
+    url('fonts/icomoon.woff?is7rpo') format('woff'),
+    url('fonts/icomoon.svg?is7rpo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-education:before {
+  content: "\e901";
+}
+.icon-exclamation-outline:before {
+  content: "\e902";
+}
+.icon-location-park:before {
+  content: "\e906";
+}
+.icon-DeathlyHallows:before {
+  content: "\e904";
+}
+.icon-home3:before {
+  content: "\e903";
+}
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+.icon-arrow-down:before {
+  content: "\ea36";
+}
+
+
+

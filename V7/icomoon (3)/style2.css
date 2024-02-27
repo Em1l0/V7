@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?is7rpo');
+  src:  url('fonts/icomoon.eot?is7rpo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?is7rpo') format('truetype'),
+    url('fonts/icomoon.woff?is7rpo') format('woff'),
+    url('fonts/icomoon.svg?is7rpo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-education:before {
+  content: "\e901";
+}
+.icon-exclamation-outline:before {
+  content: "\e902";
+}
+.icon-location-park:before {
+  content: "\e906";
+}
+.icon-DeathlyHallows:before {
+  content: "\e904";
+}
+.icon-home3:before {
+  content: "\e903";
+}
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+.icon-arrow-down:before {
+  content: "\ea36";
+}

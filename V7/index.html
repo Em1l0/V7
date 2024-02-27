@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="topnav">
+    <input type="checkbox" class="inputmenu" id="toggle">
+    <label for="toggle" class="menulabel"><span class="icon-DeathlyHallows"></span></label>
+    <section class="topmenu">
+      <a href="index.html"><span class="icon-home3"></span>Main Page</a>
+      <a href="index2.html"><span class="icon-education"></span>School Page</a>
+      <div>
+        <a class="button icon-envelop" href="#popup1">Message Us</a>
+      </div>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Contact us</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            <form action="#" method="get" clas="form2">
+              <p>
+                <label>Name</label><br>
+                <input type="text" name="x" id="name" placeholder="Full Name.">
+              </p>
+              <p>
+                <label>Email</label><br>
+                <input type="email2" placeholder="Example@gmail.com" name="email" id="email" required>
+              </p>
+              <p>
+                <label>Comment</label><br>
+                <textarea placeholder="Please leave a message for us." id="Comment" cols="20" rows="5"
+                  required></textarea><br><br>
+              </p>
+              <p>
+                <br>
+                <input type="submit" value="Send" id="submit2">
+              </p>
+            </form>
+          </div> <!-- popup content -->
+        </div> <!-- popup -->
+      </div></a> <!-- popup overlay -->
+      <div class="social">
+        <a href="#top"><span class="icon-arrow-up">Up</span></a>
+        <a href="#bottom"><span class="icon-arrow-down">Down</span></a>
+      </div>
+    </section>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="animate__rollIn">
+    <img src="Images/Hogwarts-Logo.png" alt="" width="100%">
+  </div>
+  <header class="hogwarts_entry">
+    <center>
+      <h2>Hogwarts school of witchcraft and sorcery.</h2>
+    </center>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="Images/800px 1.jpg" style="width:80%">
+        <div class="text">Hogwarts</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/800px 2.jpg" style="width:80%">
+        <div class="text">Classroom</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/800px 3.jpg" style="width:80%">
+        <div class="text">Classroom</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/800px 4.jpg" style="width:80%">
+        <div class="text">Entrance</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/800px 5.jpg" style="width:80%">
+        <div class="text">The great hall</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/800px 6.jpg" style="width:80%">
+        <div class="text">The staircases</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="Images/800px 7.jpg" style="width:80%">
+        <div class="text">Hogwarts</div>
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+      }
+    </script>
+  </header>
+
+
+  <main class="hogwarts_explained">
+    <section>
+      <h2>What is hogwarts?</h2>
+      <p>Hogwarts School of Witchcraft and Wizardry boarding school of magic for
+        students aged eleven to eighteen of the Wizarding World.
+      </p>
+      <h3>Academics and traditions</h3>
+      <p>
+        Hogwarts is a coeducational, secondary boarding school, taking children
+        from ages eleven to eighteen, in line with real-world combined
+        secondary and sixth form institutions in Britain. Education at Hogwarts
+        is not compulsory, with some students being home schooled.
+        There are about one thousand students at Hogwarts.
+      </p>
+      <h3>Establishment</h3>
+      <p>
+        Founded around the 9th century and 10th century by Godric Gryffindor,
+        Rowena Ravenclaw, Helga Hufflepuff and Salazar Slytherin, Hogwarts was
+        established in the Highlands of Scotland to educate young wizards and
+        witches as well as to keep students safe from Muggle persecution.
+        Theory has it that Rowena Ravenclaw came up with the name of Hogwarts after
+        dreaming of a warty hog that led her to a cliff by a lake. Since then,
+        Hogwarts educated most wizarding children with residence in Great Britain and
+        Ireland, keeping its location hidden from other wizarding schools and Muggles.
+      </p>
+      <h3>Middle Ages</h3>
+      <p>
+        About 300 years after the school was founded, the
+        Triwizard Tournament was established as an interscholastic
+        competition among the three most prestigious magical
+        schools in Europe: Hogwarts, Beauxbatons, and Durmstrang.
+        The tournament continued for six centuries before being discontinued.
+        An attempt was made in the 1994-1995 school year to revive the
+        tournament, but the consequential death of Cedric Diggory resulted
+        in its permanent discontinuation.
+      </p>
+      <h3>Arrival</h3>
+      <p>The primary mode of transport to Hogwarts is the
+        Hogwarts Express that students take at the start of each school year.
+        Students board the train from the
+        hidden Platform 9¾ at King's Cross station in London.
+        The train arrives at Hogsmeade station near Hogwarts, sometime after nightfall.
+      </p>
+      <p>
+        From there, first-year students are accompanied by the
+        "Keeper of the Keys, Game and Grounds"
+        to small boats, which magically sail across the lake and get them near the entrance of Hogwarts.
+        The older students ride up to the castle in carriages pulled by creatures called Thestrals.
+        When the first-year students initially arrive at the castle, they wait in a small
+        chamber off the entrance hall until the older students have taken
+        their seats, and then enter the Great Hall for the Sorting Ceremony to
+        determine their House assignments.
+      </p>
+
+      <h3>Houses</h3>
+      <p>Hogwarts is divided into four houses, each bearing the last
+        name of its founder: Godric Gryffindor, Salazar Slytherin,
+        Rowena Ravenclaw and Helga Hufflepuff.
+        Throughout the school year, the houses compete for
+        the House Cup, gaining and losing points based on actions
+        such as performance in class and rule violations.
+        The house with the highest end-of-year total wins and
+        has its colours displayed in the Great Hall for the following school year.
+        Each house also has its own Quidditch team that competes for the Quidditch Cup.
+        These two competitions breed rivalries between the houses.
+        Houses at Hogwarts are living and learning communities for their students.
+        Each house is under the authority of one of the Hogwarts staff members.
+        The Heads of the houses, as they are called, are in charge of giving their
+        students important information, dealing with matters of severe punishment,
+        and responding to emergencies in their houses, among other things.
+        The dormitory and common room of a House are, barring rare exceptions,
+        inaccessible to students belonging to other Houses; however, different
+        houses will share classes as they are based on year group rather than House.
+      </p>
+    </section>
+
+    <form action="#" method="get">
+      <p><em>Admission to Hogwarts</em></p>
+
+      <p>
+        <label>Name</label><br>
+        <input type="text" name="x" id="name" placeholder="Full Name.">
+      </p>
+
+      <p>
+        Gender:
+        <input type="radio" id="Male" name="Gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" id="Non-Binary" name="Gender" value="Non-Binary">
+        <label for="Non-Binary">Non-Binary</label><br>
+      </p>
+
+      <p>
+        <label for="phone">Enter your phone number:</label><br>
+        <input type="number" id="phone" name="phone" placeholder="123-4567" required="number"><br><br>
+      </p>
+
+      <p>
+        <label>Email</label><br>
+        <input type="email" placeholder="Example@gmail.com" name="email" id="email" required>
+      </p>
+
+      <p>
+        <label>Date of admission:</label>
+        <input type="date" name="" id="date" required>
+      </p>
+
+
+
+
+      <p>
+        <label>
+          Where are you coming from? <br>
+          <select>
+            <option name="UK">UK</option>
+            <option name="Europe">Europe</option>
+            <option name="USA">USA</option>
+            <option name="Asia">Asia</option>
+          </select>
+        </label>
+      </p>
+
+
+
+      <p>
+        <label>Comment</label><br>
+        <textarea placeholder="Please leave a message for us." id="Comment" cols="20" rows="5"
+          required></textarea><br><br>
+      </p>
+
+
+      <p>
+        <br>
+        <input type="checkbox" id="news" name="news" value="news">
+        <label for="news"> put me on the email list for news about admissions.</label><br>
+        <input type="checkbox" id="Post" name="Post" value="Post">
+        <label for="Post"> send me emails regarding school events.</label><br>
+      </p>
+
+      <p>
+        <br>
+        <input type="submit" value="Send" id="submit">
+      </p>
+
+
+    </form>
+    <br>
+  </main>
+
+  <footer>
+    <h2>Hogwarts is a school for everyone</h2>
+    <hr>
+    <section class="articles" id="bottom">
+      <article>
+        We at hogwarts ensure the safety of our students and have rules set up. Our main ones are:
+        <ul>
+          <li>Rule 1</li>
+          <li>Rule 2</li>
+          <li>Rule 3</li>
+          <li>Rule 4</li>
+
+        </ul>
+
+      </article>
+      <article>
+        quick links:
+        <li><a href="#">Rule book</a></li>
+        <li><a href="#">Ministry of magic</a></li>
+        <li><a href="#">Other schools</a></li>
+        <li><a href="#">Hogsmeade</a></li>
+        <li><a href="#">diagon alley</a></li>
+        <br>
+        <br>
+      </article>
+      <article>
+        Contact us:
+        <li>Teacher1@example.###</li>
+        <li>Phone: 123-4567</li>
+        <li>Teacher3@example.###</li>
+        <li>Phone: 123-4567</li>
+        <li>Teacher4@example.###</li>
+        <li>Phone: 123-4567</li>
+        <br>
+        <br>
+      </article>
+    </section>
+
+
+
+
+  </footer>
+
+
+
+
+
+
+</body>
+
+</html>
