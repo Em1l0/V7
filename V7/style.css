@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Jolly+Lodger&family=Oregano&display=swap');
+/* Bigelow Rules, Jolly Lodger, Oregano fonts imported */
+
 /*------------------------- Dark/Light Mode -------------------------*/
 
 html {
@@ -82,7 +86,9 @@ body{
     background-size: cover;
     background-attachment: fixed;   
  
+    font-family: Oregano;
 }
+
 
 
 
@@ -183,6 +189,7 @@ body{
 footer h2{
   text-align:center;
   padding-top:5px;
+  font-family:Bigelow Rules;
 }
 
 footer{
@@ -444,7 +451,6 @@ table caption {
 }
 
 table tr {
-/*background-color: var(--nc-bg-13);*/
   border: 1px solid yellow;
   padding: .35em;
 }
@@ -540,10 +546,12 @@ main h3{
   text-align: center;
   background-color:rgb(255, 255, 255, 0.5);
   color: black;
+  font-family: Oregano;
 }
 
 
-#slideset2 {height: 12em; 
+#slideset2 {
+  height: 12em; 
   width:70%;
   margin-top:50px;
   min-width: 320px;
@@ -554,7 +562,8 @@ main h3{
   color:var(--cl-b-lg);
 }       
 
-#slideset2 > * {position: absolute;
+#slideset2 > * {
+position: absolute;
 top: 100%; 
 left: 10px;
 animation: 24s autoplay2 infinite ease-in-out;
@@ -612,7 +621,7 @@ animation-play-state: paused}
   color:khaki;
 }
 .HF div{
-padding:30px;
+  padding:30px;
 }
 
 @media screen and (min-width: 580px){
